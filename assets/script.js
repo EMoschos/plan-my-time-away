@@ -1,5 +1,7 @@
-//Display Day and Time in Heading
+//Display Day and Time in Heading - COMPLETED
+setInterval(function(){
 $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+}, 1000);
 
 //Change display of tasks with reference to time of day
 var hour = document.getElementById("hour");
