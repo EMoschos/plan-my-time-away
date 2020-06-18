@@ -1,22 +1,52 @@
-//Display Day and Time in Heading - COMPLETED
-setInterval(function(){
-$("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+//Display Day and Time in Heading
+setInterval(function () {
+    $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
 }, 1000);
 
+// Store hour input text
+var currentHour = moment().hour();
+console.log(currentHour);
+console.log(typeof(currentHour));
+console.log($("textarea").data("value"))
+console.log(typeof($("textarea").data("value")));
+
 //Change display of tasks with reference to time of day
-var hour = document.getElementById("hour");
-console.log(currentDay.innerHTML)
-//$("currentDay").text = moment().format("MMM Do YYYY");
-//var currentHour = document.getElementById("test");
-//currentHour.innerHTML = moment().format('H');
-var hourObject = moment().format('H');
-var correctHour = new Date().getHours();
-var hourString = JSON.stringify(hourObject);
-var hourInteger = parseInt(hourString);
-console.log(parseInt(hourObject)===21);
-console.log(correctHour)
-console.log(typeof(hourString));
-console.log(hourString);
-console.log(typeof(hourInteger));
-console.log(hourInteger==="21");
-//if (hourInteger==9) {
+function timeTasks() {
+    $("textarea").each(function() {
+    if ( $(this).data("value") === currentHour) {
+        $(this).addClass("present")
+    }
+    if ( $(this).data("value") < currentHour) {
+        $(this).addClass("past")
+    }
+    if ( $(this).data("value") > currentHour) {
+        $(this).addClass("future")
+    }
+})};
+
+// Function for saving and storing input text to local storage.
+$("button").on("click", function (event) {
+    // var time6 = $("#text0").val().trim();
+    var task = $(this).prev().val().trim();
+    console.log(task)
+    var btnClick = $(this).attr("id");
+
+    console.log(btnClick)
+    localStorage.setItem(btnClick, task);
+})
+
+//Function for displaying tasks restored from local storage.
+function showList() {
+    $("#0").text(localStorage.getItem("save0"));
+    $("#1").text(localStorage.getItem("save1"));
+    $("#2").text(localStorage.getItem("save2"));
+    $("#3").text(localStorage.getItem("save3"));
+    $("#4").text(localStorage.getItem("save4"));
+    $("#5").text(localStorage.getItem("save5"));
+    $("#6").text(localStorage.getItem("save6"));
+    $("#7").text(localStorage.getItem("save7"));
+    $("#8").text(localStorage.getItem("save8"));
+}
+
+showList();
+setInterval(timeTasks(), 60000);

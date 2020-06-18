@@ -16,127 +16,82 @@
 <body>
   <header class="jumbotron">
     <h1 class="display-3">Work Day Scheduler</h1>
-    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p class="lead">A simple calendar app for scheduling your 9-5 work day</p>
     <p id="currentDay" class="lead"></p>
   </header>
+  <!-- Daily planner for the normal work day between 9-5pm -->
   <div class="container">
-    <!-- Timeblocks go here -->
+    <!-- Timeblocks for 9:00 -->
     <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text">06:00</span>
+      <div class="input-group-prepend input-group-text">
+        09:00
       </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
-      <div class="input-group-append">
-        <button class="input-group-text saveBtn"><i class="fas fa-save"></i></button>
-      </div>
+      <textarea id="0" class="form-control" aria-label="With textarea" data-value="9"></textarea>
+      <button id="save0" class="input-group-append input-group-text saveBtn"><i class="fas fa-save"></i></button>
     </div>
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text">07:00</span>
-      </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
-      <div class="input-group-append">
-        <button class="input-group-text saveBtn"><i class="fas fa-save"></i></button>
-      </div>
-    </div>
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text">08:00</span>
-      </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
-      <div class="input-group-append">
-        <button class="input-group-text saveBtn"><i class="fas fa-save"></i></button>
-      </div>
-    </div>
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text">09:00</span>
-      </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
-      <div class="input-group-append">
-        <button class="input-group-text saveBtn"><i class="fas fa-save"></i></button>
-      </div>
-    </div>
+    <!-- Timeblocks for 10:00 -->
     <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text">10:00</span>
       </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
-      <div class="input-group-append">
-        <button class="input-group-text saveBtn"><i class="fas fa-save"></i></button>
-      </div>
+      <textarea id="1" class="form-control" aria-label="With textarea" data-value="10"></textarea>
+      <button id="save1" class="input-group-append input-group-text saveBtn"><i class="fas fa-save"></i></button>
     </div>
+    <!-- Timeblocks for 11:00 -->
     <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text">11:00</span>
       </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
-      <div class="input-group-append">
-        <button class="input-group-text saveBtn"><i class="fas fa-save"></i></button>
-      </div>
+      <textarea id="2" class="form-control" aria-label="With textarea" data-value="11"></textarea>
+      <button id="save2" class="input-group-append input-group-text saveBtn"><i class="fas fa-save"></i></button>
     </div>
+    <!-- Timeblocks for 12:00 -->
     <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text">12:00</span>
       </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
-      <div class="input-group-append">
-        <button class="input-group-text saveBtn"><i class="fas fa-save"></i></button>
-      </div>
+      <textarea id="3" class="form-control" aria-label="With textarea" data-value="12"></textarea>
+      <button id="save3" class="input-group-append input-group-text saveBtn"><i class="fas fa-save"></i></button>
     </div>
+    <!-- Timeblocks for 13:00 or 1pm -->
     <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text">13:00</span>
       </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
-      <div class="input-group-append">
-        <button class="input-group-text saveBtn"><i class="fas fa-save"></i></button>
-      </div>
+      <textarea id="4" class="form-control" aria-label="With textarea" data-value="13"></textarea>
+      <button id="save4" class="input-group-append input-group-text saveBtn"><i class="fas fa-save"></i></button>
     </div>
+    <!-- Timeblocks for 14:00 or 2pm -->
     <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text">14:00</span>
       </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
-      <div class="input-group-append">
-        <button class="input-group-text saveBtn"><i class="fas fa-save"></i></button>
-      </div>
+      <textarea id="5" class="form-control" aria-label="With textarea" data-value="14"></textarea>
+      <button id="save5" class="input-group-append input-group-text saveBtn"><i class="fas fa-save"></i></button>
     </div>
+    <!-- Timeblocks for 15:00 or 3pm -->
     <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text">15:00</span>
       </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
-      <div class="input-group-append">
-        <button class="input-group-text saveBtn"><i class="fas fa-save"></i></button>
-      </div>
+      <textarea id="6" class="form-control" aria-label="With textarea" data-value="15"></textarea>
+      <button id="save6" class="input-group-append input-group-text saveBtn"><i class="fas fa-save"></i></button>
     </div>
+    <!-- Timeblocks for 16:00 or 4pm -->
     <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text">16:00</span>
       </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
-      <div class="input-group-append">
-        <button class="input-group-text saveBtn"><i class="fas fa-save"></i></button>
-      </div>
+      <textarea id="7" class="form-control" aria-label="With textarea" data-value="16"></textarea>
+      <button id="save7" class="input-group-append input-group-text saveBtn"><i class="fas fa-save"></i></button>
     </div>
+    <!-- Timeblocks for 17:00 or 5pm -->
     <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text">17:00</span>
       </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
-      <div class="input-group-append">
-        <button class="input-group-text saveBtn"><i class="fas fa-save"></i></button>
-      </div>
-    </div>
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text">18:00</span>
-      </div>
-      <textarea class="form-control" aria-label="With textarea"></textarea>
-      <div class="input-group-append">
-        <button class="input-group-text saveBtn"><i class="fas fa-save"></i></button>
-      </div>
+      <textarea id="8" class="form-control" aria-label="With textarea" data-value="17"></textarea>
+      <button id="save8" class="input-group-append input-group-text saveBtn"><i class="fas fa-save"></i></button>
     </div>
 
     <!-- <div class="row">
