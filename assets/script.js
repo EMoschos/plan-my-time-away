@@ -3,15 +3,16 @@ setInterval(function () {
     $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
 }, 1000);
 
-// Store hour input text
-var currentHour = moment().hour();
-console.log(currentHour);
-console.log(typeof(currentHour));
-console.log($("textarea").data("value"))
-console.log(typeof($("textarea").data("value")));
-
-//Change display of tasks with reference to time of day
+//Change color display of tasks with reference to time of day
 function timeTasks() {
+    // Store hour input text
+    var currentHour = moment().hour();
+    console.log(currentHour);
+    console.log(typeof(currentHour));
+    console.log($("textarea").data("value"))
+    console.log(typeof($("textarea").data("value")));
+    
+    // Changes background Color in Textarea
     $("textarea").each(function() {
     if ( $(this).data("value") === currentHour) {
         $(this).addClass("present")
@@ -56,5 +57,5 @@ function showList() {
 showList();
 timeTasks();
 
-//Function to update background colors every 5 mins based on current time.
-setInterval(timeTasks, 300000); //300000 milliseconds = 5 Mins 
+//Function to update background colors every min based on current time.
+setInterval(timeTasks, 60000); //60000 milliseconds = 1 Min 
