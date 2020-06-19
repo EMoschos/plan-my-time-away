@@ -1,6 +1,6 @@
 //Display Day and Time in Heading
 setInterval(function () {
-    $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+    $("#currentDay").html(moment().format("dddd, MMMM Do YYYY, HH:mm:ss"));
 }, 1000);
 
 //Change color display of tasks with reference to time of day
