@@ -13,4 +13,4 @@ The dynamically styled time-blocks do not alter functionality.
 
 # Planner App Screenshot
 
-![Planner App](./planner-app-screenshot.JPG)
+![Planner App](./planner-app-screenshot1.JPG)
