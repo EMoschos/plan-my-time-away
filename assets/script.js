@@ -15,14 +15,17 @@ function timeTasks() {
     $("textarea").each(function() {
     if ( $(this).data("value") === currentHour) {
         $(this).addClass("present")
+        $(this).removeClass("past future")
     }
     if ( $(this).data("value") < currentHour) {
         $(this).addClass("past")
+        $(this).removeClass("present future")
     }
     if ( $(this).data("value") > currentHour) {
         $(this).addClass("future")
+        $(this).removeClass("past present")
     }
-    consle.log("Updated Colors")
+    console.log("Updated Colors")
 })};
 
 // Function for saving and storing input text to local storage.
