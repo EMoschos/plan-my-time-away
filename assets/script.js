@@ -22,16 +22,17 @@ function timeTasks() {
     if ( $(this).data("value") > currentHour) {
         $(this).addClass("future")
     }
+    consle.log("Updated Colors")
 })};
 
 // Function for saving and storing input text to local storage.
 $("button").on("click", function (event) {
-    // var time6 = $("#text0").val().trim();
     var task = $(this).prev().val().trim();
     console.log(task)
+    
     var btnClick = $(this).attr("id");
-
     console.log(btnClick)
+    
     localStorage.setItem(btnClick, task);
 })
 
@@ -53,4 +54,4 @@ showList();
 timeTasks();
 
 //Function to update background colors every 5 mins based on current time.
-setInterval(timeTasks, 300000);
+setInterval(timeTasks, 300000); //300000 milliseconds = 5 Mins 
