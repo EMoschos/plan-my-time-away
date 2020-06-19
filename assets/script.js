@@ -48,5 +48,9 @@ function showList() {
     $("#8").text(localStorage.getItem("save8"));
 }
 
+//Initialise the app
 showList();
-setInterval(timeTasks(), 60000);
+timeTasks();
+
+//Function to update background colors every 5 mins based on current time.
+setInterval(timeTasks, 300000);
