@@ -11,4 +11,4 @@ JS was used to store and retreive information on the local storage, dynamically 
 Each time block textarea can be written into and the content then  saved.  The content will only be saved if the save button is "clicked".  If the save button is "not" clicked then the information is lost if the page is "refreshed" or "closed" and re-opened. 
 The dynamically styled time-blocks do not alter functionality.
 
-![Planner App](./Assets/pics/addimagehere.jpeg)
+![Planner App](./Assets/planner-app-screenshot.JPG)
