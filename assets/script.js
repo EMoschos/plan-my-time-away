@@ -57,5 +57,5 @@ function showList() {
 showList();
 timeTasks();
 
-//Function to update background colors every min based on current time.
+//Function to update background colors every min based on current time but colors will only change when the hour changes.
 setInterval(timeTasks, 60000); //60000 milliseconds = 1 Min 
